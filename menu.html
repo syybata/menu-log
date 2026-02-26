@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食事記録</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #fafafa;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #444;
+      border-bottom: 2px solid #e0a060;
+      padding-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    thead tr {
+      background: #e0a060;
+      color: #fff;
+    }
+    th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: bold;
+    }
+    tbody tr {
+      border-bottom: 1px solid #eee;
+      transition: background 0.2s;
+    }
+    tbody tr:hover {
+      background: #fff8f0;
+    }
+    td {
+      padding: 12px 16px;
+      vertical-align: top;
+    }
+    td:first-child {
+      white-space: nowrap;
+      font-weight: bold;
+      color: #888;
+    }
+    td.category {
+      font-weight: bold;
+      color: #c06020;
+    }
+    .item-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .item-list li::before {
+      content: "・";
+      color: #e0a060;
+    }
+    td.cost {
+      font-size: 0.85em;
+      color: #555;
+      white-space: nowrap;
+    }
+    td.cost strong {
+      display: block;
+      margin-top: 4px;
+      color: #c06020;
+      font-size: 1.05em;
+    }
+    td.photo {
+      padding: 8px 16px;
+    }
+    td.photo img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>食事記録</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>日付</th>
+        <th>写真</th>
+        <th>カテゴリ</th>
+        <th>メニュー</th>
+        <th>内容・備考</th>
+        <th>原価（概算）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026/01/13</td>
+        <td class="photo"><img src="images/PXL_20260113_030309501.MP~2.jpg" alt="2026/01/13の食事"></td>
+        <td class="category">和食（朝食）</td>
+        <td>
+          <ul class="item-list">
+            <li>目玉焼き（2個）</li>
+            <li>ご飯</li>
+            <li>味噌汁</li>
+          </ul>
+        </td>
+        <td>白飯、具だくさんの味噌汁（豆腐・ネギ・わかめ系）</td>
+        <td class="cost">卵2個 40円<br>ご飯 50円<br>味噌汁 30円<br><strong>合計 約120円</strong></td>
+      </tr>
+      <tr>
+        <td>2026/01/16</td>
+        <td class="photo"><img src="images/PXL_20260116_033108215~2.jpg" alt="2026/01/16の食事"></td>
+        <td class="category">麺類</td>
+        <td>
+          <ul class="item-list">
+            <li>ラーメン</li>
+          </ul>
+        </td>
+        <td>醤油系スープ、生卵（半熟）、チャーシュー、もやし、ネギ、青梗菜入り</td>
+        <td class="cost">麺 50円<br>スープ 30円<br>卵 20円<br>チャーシュー 80円<br>野菜類 30円<br><strong>合計 約210円</strong></td>
+      </tr>
+      <tr>
+        <td>2026/01/23</td>
+        <td class="photo"><img src="images/PXL_20260123_030848983~2.jpg" alt="2026/01/23の食事"></td>
+        <td class="category">和食（朝食）</td>
+        <td>
+          <ul class="item-list">
+            <li>目玉焼き（ハム付き、2個）</li>
+            <li>納豆ご飯</li>
+            <li>味噌汁</li>
+          </ul>
+        </td>
+        <td>納豆のせ白飯、味噌汁（豆腐・わかめ・ネギ）</td>
+        <td class="cost">卵2個+ハム 70円<br>ご飯 50円<br>納豆 30円<br>味噌汁 40円<br><strong>合計 約190円</strong></td>
+      </tr>
+      <tr>
+        <td>2026/02/05</td>
+        <td class="photo"><img src="images/PXL_20260205_031649042.MP~2.jpg" alt="2026/02/05の食事"></td>
+        <td class="category">麺類</td>
+        <td>
+          <ul class="item-list">
+            <li>きつねうどん</li>
+          </ul>
+        </td>
+        <td>大きな油揚げ（七味唐辛子かけ）、だし系スープ</td>
+        <td class="cost">うどん 40円<br>だしスープ 30円<br>油揚げ 30円<br><strong>合計 約100円</strong></td>
+      </tr>
+      <tr>
+        <td>2026/02/05</td>
+        <td class="photo"><img src="images/PXL_20260205_090555181~2.jpg" alt="2026/02/05の餌"></td>
+        <td class="category">ペット（鳥の餌）</td>
+        <td>
+          <ul class="item-list">
+            <li>シード（粒餌）</li>
+          </ul>
+        </td>
+        <td>オカメインコの餌。黄色いケージのトレイにシードを補充。</td>
+        <td class="cost">シードミックス（アワ・キビ・ヒエ等）<br>約25g 約18円<br><strong>合計 約18円</strong></td>
+      </tr>
+      <tr>
+        <td>2026/02/20</td>
+        <td class="photo"><img src="images/PXL_20260220_032512909.MP~2.jpg" alt="2026/02/20の食事"></td>
+        <td class="category">和洋折衷（朝食）</td>
+        <td>
+          <ul class="item-list">
+            <li>納豆ご飯</li>
+            <li>目玉焼きトースト</li>
+            <li>味噌汁</li>
+          </ul>
+        </td>
+        <td>納豆のせ白飯、食パンに目玉焼きのせ、味噌汁（豆腐・ネギ）</td>
+        <td class="cost">ご飯+納豆 80円<br>食パン 30円<br>卵 20円<br>味噌汁 30円<br><strong>合計 約160円</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
